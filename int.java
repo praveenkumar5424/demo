@@ -24,3 +24,20 @@ public class ArithmeticOperations {
         sc.close();
     }
 }
+
+
+
+output
+
+
+
+
+    Enter first number: 10
+Enter second number: 3
+
+Results:
+Addition: 13
+Subtraction: 7
+Multiplication: 30
+Division: 3
+Modulus: 1
