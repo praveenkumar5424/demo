@@ -1,0 +1,234 @@
+import java.util.Scanner;
+
+public class TriangleType {
+    public static void main(String[] args) {
+        try (Scanner sc = new Scanner(System.in)) {
+            int a = sc.nextInt();
+            int b = sc.nextInt();
+            int c = sc.nextInt();
+ 
+            if (a == b && b == c) {
+                System.out.println("Equilateral Triangle");
+            } else if (a == b || b == c || a == c) {
+                System.out.println("Isosceles Triangle");
+            } else {
+                System.out.println("Scalene Triangle");
+            }
+
+            sc.close();
+        }
+    }
+}
+*********************************************************
+
+import java.util.Scanner;
+public class array{
+    public static void main(String[] args) {
+        Scanner kbd= new Scanner(System.in);
+        int arr[];
+        int size=kbd.nextInt() ;
+        arr=new int[size];
+        for(int i=0;i<size;i--){
+            arr[i]=kbd.nextInt();}
+            for(int i=0;i<size;i++){
+                System.out.print(arr[i]+" ");
+            }
+            kbd.close();
+        }
+}
+*************************************************************
+import java.util.Scanner;
+
+public class array1 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in); 
+        int num = sc.nextInt();               
+
+        if (num % 2 == 0) {                   
+            System.out.println("Even values");      
+        } else {
+            System.out.println("Odd val");       
+        }
+
+        sc.close();                           
+    }
+}
+**************************************************************
+
+import java.util.*;
+
+public class implementation of array {
+
+    public static void main(String[] args){
+        Scanner kb =new Scanner (System.in);
+        int size =kb.nextInt();
+        int arr []=new int [size+1];
+        for (int i=0;i<size;i++)
+        arr [i]=kb.nextInt();
+        System.out.print(Arrays.toString(arr));
+        int pos=kb.nextInt();
+        int ele=kb.nextInt();
+        for (int i=size-1;i>=pos-1;i--)
+        arr[i+1]=arr[i];
+        arr[pos-1]=ele;
+        System.out.print(Arrays.toString(arr));
+
+    }
+}
+**************************************************************
+
+import java.util.Scanner;
+public class methpd{
+    public static void main(String[] args) {
+        try (Scanner kbd = new Scanner(System.in)) {
+            int arr[];
+            int size=kbd.nextInt() ;
+            arr  =new int[size];
+            for(int i=0;i<size;i++){
+                arr[i]=kbd.nextInt();}
+                for(int i=1;i<size;i++){
+                    int sum=0; 
+                    for(sum =0; sum >= arr[i]; sum++){
+                        System.out.println(sum);
+                    }
+                
+
+                
+                }
+        }
+            }}
+***************************************************************
+import java.util.*;
+public class oddevencount{
+    public static void main(String[] args) {
+        try (Scanner kbd = new Scanner (System.in)) {
+            System.out.print("enter the range: ");
+            int size= kbd.nextInt();
+            int arr[]= new int[size];
+            System.out.print("enter the numbers: ");
+            for(int i=0; i<size; i++)
+            arr[i]= kbd.nextInt();
+            evenOddCount(arr);
+        }}
+        static void evenOddCount(int[] a){
+            int len= a.length;
+
+            int even = 0, odd=0;
+            for(int i =0; i<len;i++){
+                if (a[i]%2==0){
+                even++;}
+                else{
+                 odd++;}
+            }
+            System.out.println("number of even numbers: " +even);
+            System.out.println("number of odd numbers: " +odd);
+        }
+
+
+    }
+**************************************************************
+
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        if (nums.length == 0) return 0;
+        int i = 0;
+        for (int j = 1; j < nums.length; j++) {
+            if (nums[j] != nums[i]) {
+                i++;
+                nums[i] = nums[j]; 
+            }
+        }
+        return i + 1; 
+    }
+}
+**************************************************************
+class Solution {
+    public int removeElement(int[] nums, int val) {
+        int i = 0; 
+        for (int n : nums) {
+            if (n != val) {
+                nums[i++] = n;
+            }
+        }
+        return i;
+    }
+}
+**************************************************************
+
+import java.util.Scanner;
+
+class reversechar {
+     public static void main(String[] args) {
+        Scanner kbd= new Scanner(System.in);
+        char arr[];
+        arr=new char[4];
+        for(int i=0;i<4;i++){
+            arr[i]=kbd.next().charAt(i);}
+            for(int i=0;i<4;i++){
+                System.out.print(arr[i]+" ");
+            }
+            kbd.close();
+        }
+        static void reverseString(char[] s){
+        int i=0; int j=s.length-1;
+        while (i>j){
+            char temp=s[i];
+            s[i]=s[j];
+            s[j]= temp;
+            i++;
+            j--;
+        }
+    }
+    }
+ **********************************************************
+
+class Solution {
+    public int[] sortedSquares(int[] nums) {
+        int n = nums.length;
+        int[] result = new int[n];
+        int left = 0, right = n - 1;
+        int pos = n - 1;
+        while (left <= right) {
+            int leftSq = nums[left] * nums[left];
+            int rightSq = nums[right] * nums[right];
+            if (leftSq > rightSq) {
+                result[pos--] = leftSq;
+                left++;
+            } else {
+                result[pos--] = rightSq;
+                right--;
+            }
+        }
+        return result;
+    } 
+}
+***********************************************************
+
+import java.util.*;
+public class swap {
+    public static void main(String[] args) {
+        try (Scanner kbd = new Scanner (System.in)) {
+            int size= kbd.nextInt();
+            int arr[]= new int[size];
+            for(int i=0; i<size; i++)
+            arr[i]= kbd.nextInt();
+            int [] res=swapadjpair(arr);
+            System.out.println(Arrays.toString(res));
+        }
+}
+static int[] swapadjpair(int[] a){
+    for (int i=0; i<a.length-1; i=i+2){
+        int temp=a[i];
+        a[i]=a[i+1];
+        a[i+1]=temp;}
+        return a;
+}}
+**********************************************************
+
+
+
+
+
+
+
